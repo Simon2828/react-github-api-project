@@ -1,4 +1,5 @@
 var React = require('react');
+var Link = require('react-router').Link;
 
 var GithubUser = React.createClass({
     propTypes: {
@@ -6,9 +7,11 @@ var GithubUser = React.createClass({
     },
     render: function(){
         return (
-            <Link to={`https://api.github.com/users/${this.props.username}`}>
-                <img src={this.props.avatar_url} />
-                {this.props.login}
+            <Link className="followers-link" to={`/user/${this.props.user.login}`}> {/* it works ok but is this right?*/}
+                <img className="followers-info__avatar" src={this.props.user.avatar_url} />
+                <div className="followers-info__login">
+                {this.props.user.login}
+                </div>
             </Link>
         );
     }    
