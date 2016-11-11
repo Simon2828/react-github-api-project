@@ -30,8 +30,7 @@ var Followers = React.createClass({
                             </div>
                         );
                     }
-                        
-                    /* INSERT CODE HERE TO RETURN A NEW <GithubUser/> */)}
+                    )}
                 </ul>
             </div>
         );
